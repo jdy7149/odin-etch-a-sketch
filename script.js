@@ -11,10 +11,33 @@ for (let i = 0; i < 16; i++){
     container.appendChild(row);
 }
 
+function random(number){
+    return Math.floor(Math.random() * number);
+}
+
 const cells = document.querySelectorAll('.cell');
+
+function changeHoveringColor(color, random = null){
+    cells.forEach(elem => elem.addEventListener('mouseover', evt => {
+        evt.target.style.backgroundColor = random === null ? color : `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    }));
+}
 
 cells.forEach(elem => elem.addEventListener('mouseover', evt => {
     evt.target.style.backgroundColor = 'black';
 }));
 
-console.log(document.querySelector('#random').value);
+const radios = document.querySelectorAll('input[type="radio"]');
+
+radios.forEach(elem => elem.addEventListener('change', evt => {
+    const id = evt.target.getAttribute('id');
+    
+    if (id === 'random'){
+        changeHoveringColor('', random);
+    } else if (id === 'eraser'){
+        changeHoveringColor('white');
+    } else if (id === 'black'){
+        changeHoveringColor('black');
+    }
+
+}));
