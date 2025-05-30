@@ -34,7 +34,7 @@ body {
     align-items: center;
 }
 
-.container {
+.grid {
     width: 600px;
     height: 600px;
     display: flex;
@@ -55,6 +55,12 @@ body {
     list-style-type: none;
     display: flex;
     gap: 24px;
+}
+
+input[type="range"] {
+    width: 100px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .footer {
