@@ -62,6 +62,10 @@ radios.forEach(elem => elem.addEventListener('change', evt => {
         default:
             hoverHandler = evt => evt.target.style.backgroundColor = 'black';
     }
-    
+
     document.querySelectorAll('.cell').forEach(elem => elem.addEventListener('mouseover', hoverHandler));
 }));
+
+document.querySelector('#clear').addEventListener('click', () => {
+    document.querySelectorAll('.cell').forEach(elem => elem.style.backgroundColor = 'white');
+});
