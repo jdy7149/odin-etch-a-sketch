@@ -16,32 +16,54 @@ body {
     padding: 0;
 }
 
+.header, .footer {
+    background-color: rgb(243, 33, 233);
+    color: aliceblue;
+    padding: 16px;
+}
+
 .header {
     font-size: 45px;
-    padding: 16px;
     text-align: center;
 }
 
 .content {
     flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
-    width: 450px;
-    height: 450px;
+    width: 600px;
+    height: 600px;
     display: flex;
     flex-direction: column;
+}
+
+.option-bar {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    font-size: 20px;
+}
+
+.option-bar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
 }
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font: 20px;
-    padding: 16px;
+    font-size: 20px;
     height: 100px;
+    margin-top: 16px;
 }
 
 .row {

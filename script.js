@@ -10,3 +10,11 @@ for (let i = 0; i < 16; i++){
     }
     container.appendChild(row);
 }
+
+const cells = document.querySelectorAll('.cell');
+
+cells.forEach(elem => elem.addEventListener('mouseover', evt => {
+    evt.target.style.backgroundColor = 'black';
+}));
+
+console.log(document.querySelector('#random').value);
